@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.vanpine.Mapper.PatientAndDoctorMapper">
+    <select id="multipleQuery" parameterType="Integer" resultType="com.vanpine.Entity.VO.PatientAndDoctorVO">
+        SELECT patient.patient_connection_id as id,
+               patient.patient_name,
+               patient.patient_age,
+               patient.patient_gender,
+               doctor.doctor_name,
+               doctor.department
+        from patient
+                 INNER JOIN doctor on patient.patient_connection_id = doctor.connection_id;
+    </select>
+</mapper>
+

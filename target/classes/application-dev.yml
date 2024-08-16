@@ -1,0 +1,16 @@
+vanpine:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: medical
+    username: root
+    password: Wangbing201708
+    redisHost: localhost
+    redisPort: 6379
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
